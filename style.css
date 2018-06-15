@@ -124,6 +124,15 @@ body {
     min-height: 850px;
 }
 
+.home-link {
+    color: #fff;
+}
+
+.home-link:hover {
+    color: #1b2133;
+    text-decoration: none;
+}
+
 .find-box {
     background: #c800ff; /* Old browsers */
 background: -moz-linear-gradient(45deg, #c800ff 0%, #8b00b1 63%); /* FF3.6-15 */
@@ -295,3 +304,34 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border-top-right-radius: 0;
 }
 
+/*
+ * My projects
+ */
+
+.await-text {
+    color: #00aeef;
+}
+
+.accept-text {
+    color: #39b54a;
+}
+
+.complete-text {
+    color: red;
+}
+
+.badge-bids {
+    background-color: red;
+    border-radius: 20px;
+    border-color: 1px 1px 1px #fff;
+    margin-left: 5px;
+}
+
+.profile-link {
+    color: #515974;
+}
+
+.profile-link:hover {
+    text-decoration: none;
+    color: #e63076;
+}
