@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="inc/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              
+              <li class="nav-item">
+                  <div class="dashlogo p-3"><img src="images/dash%20logo.png"></div>
+                  <div class="whitetext p-3">Yuno Media Ltd</div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin-dash.html">
+                  Admin Panel <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="admin-tickets.html">
+                 Tickets
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin-accounts.html">
+                  Manage Accounts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Logout
+                </a>
+              </li>
+            </ul>
+
+           
+          </div>
+        </nav>
+          </div>
+        </div>
+      <div class="col-lg-12 second-nav pt-3 pb-3" align="center"><img src="images/tlc-logo.png"></div>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="container-fluid pt-3 pb-3">
+                <div class="row pt-3 pb-3">
+                    <div class="col-lg-2 pt-2 pb-2"><button type="button" class="btn btn-block btn-fil-style1 btn-lg"><a href="admin-tickets.html" class="profile-link">Back to tickets</a></button></div>
+                    <div class="col-lg-2 pt-2 pb-2"><button type="button" class="btn btn-block btn-fil-style1 btn-lg"><a href="admin-dash.html" class="profile-link">Admin Panel</a></button></div>
+                </div>
+            </div>
+                
+            <div class="container-fluid pt-3 pb-3">
+                <div class="row">
+                    <div class="col-lg-7 work-card">
+                        <div class="row">
+                        <div class="col-lg-9 h3">Budget Slider broken</div>
+                        <div class="col-lg-3"><button type="button" class="btn btn-block btn-fil-style5 btn-lg">Reply</button></div>
+                        </div>
+                        <div><b><u>Purple Lily Design 10/6/2018 10:08am</u></b></div>
+                        <div>Hi there, thanks for getting back. I was applying for the Graphic design job posted on 14/06. I went into the project overview to see more details and I went to place a bid but it didn't work. </div>
+                        <hr>
+                        <div><b><u>Admin - Rob 10/06/2018 9:36am</u></b></div>
+                        <div>Hi Purple Lily Designs. Could you please tell me what you were doing at the time, which project you planned to bid on etc. Many thanks, Rob</div>
+                        <hr>
+                        <div><b><u>Purple Lily Design 08/10/2018 4:15pm</u></b></div>
+                        <div>Hi there, I couldn't get the bid button to work. Please could you advise what to do.</div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4">
+                    <div class="row work-card">
+                        <div class="col-lg-12 pb-5 text-center">
+                        <p><i>Go to backend management panel for this account.</i></p>
+                            <button class="btn btn-fil-style2 btn-block"><a href="account-manage.html" class="home-link">View account panel</a></button>
+                        </div>
+                        <div class="col-lg-12 text-center">
+                        <p><i>Have you completely resolved the issue? Once resolved you can find the ticket in the ticket archive. </i></p>
+                        <button class="btn btn-success btn-block">Resolve</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+                
+</main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
+ </body>
+</html>
