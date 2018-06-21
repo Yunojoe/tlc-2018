@@ -63,36 +63,37 @@
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">    
         <div class="container-fluid pt-3 pb-3">
                 <div class="row pt-3 pb-3">
-                    <div class="col-lg-2 pt-2 pb-2"><button type="button" class="btn btn-block btn-fil-style2 btn-lg">Project Overview</button></div>
+                    <div class="col-lg-2 pt-2 pb-2"><button type="button" class="btn btn-block btn-fil-style1 btn-lg"><a href="workspace-bid.html" class="profile-link">Project Overview</a></button></div>
                     <div class="col-lg-2 pt-2 pb-2"><button type="button" class="btn btn-block btn-fil-style1 btn-lg"><a href="messages.html" class="profile-link">Messages</a></button></div>
-                    <div class="col-lg-3 pt-2 pb-2"><button type="button" class="btn btn-block btn-fil-style1 btn-lg"><a href="todo.html" class="profile-link">To-do</a></button></div>
+                    <div class="col-lg-3 pt-2 pb-2"><button type="button" class="btn btn-block btn-fil-style2 btn-lg">To-do</button></div>
                 </div>
             </div>
-            
+        
     
-            <div class="container-fluid pt-3 pb-3">
-                <div class="row filter-work">
-                    <div class="col-lg-1">Due Date</div>
-                    <div class="col-lg-1">Budget</div>
-                </div>
-            </div>
-    
-            <div class="container-fluid pt-3 pb-3">
+    <div class="container-fluid pt-3 pb-3">
                 <div class="row work-card">
-                    <div class="col-lg-1">15/06/2018</div>
-                    <div class="col-lg-1">£740</div>
-
-                    <!--<div class="col-lg-2 pt-2 pb-2"><button type="button" class="btn btn-block btn-fil-style4 btn-lg">Apply</button></div>-->
-                    <div class="col-lg-12 h3 pt-3 pb-3">Web Design</div>
-                    <div class="col-lg-8">We need a new website for our established company. As stated our budget is small. Please contact us in the message section to begin discussions. Our website should be sleek, trendy, user-friendly and should be way better than our competitors so please include some research before starting designs.</div>
-                    <div class="col-lg-1"><div class="v1"></div></div>
-                    <div class="col-lg-3 pt-2 pb-2 btn-block"><i>Click below to complete the project. You will have to wait for the project owner to agree to completion. Once agreed this project will appear in your completed project section.</i><button type="button" class="btn btn-block btn-fil-style4 btn-lg">Request completion</button></div>
-                    <div class="col-lg-12 h5">Resources</div>
-                    <div class="col-lg-2"><img src="images/10.%20case%20studies%20icon%20.png" class="img-thumbnail rounded"></div>
-                    <div class="col-lg-2"><img src="images/dash%20logo.png" class="img-thumbnail rounded"></div>
+                    <div class="col-lg-12">
+                    <div id="myDIV" class="header">
+                        <h2>My To Do List</h2>
+                        <input type="text" id="myInput" placeholder="Title...">
+                        <span onclick="newElement()" class="addBtn">Add</span>
+                    </div>
+                    </div>
+                <div class="row container-fluid">
+                    <div class="col-lg-12">
+                        <ul class="todo1" id="myUL">
+                            <li class="todo2">Hit the gym</li>
+                            <li class="todo2">Pay bills</li>
+                            <li class="todo2">Meet George</li>
+                            <li class="todo2">Buy eggs</li>
+                            <li class="todo2">Read a book</li>
+                            <li class="todo2">Organize office</li>
+                        </ul>
+                    </div>
+                </div>
                 </div>
                 
-            </div>
+    </div>
 </main>
 
     <!-- Bootstrap core JavaScript
@@ -139,6 +140,63 @@
           }
         }
       });
+    </script>
+    <script>
+    // Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+} 
     </script>
  </body>
 </html>
